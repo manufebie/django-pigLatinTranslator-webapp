@@ -1,0 +1,10 @@
+{% extends 'pig_app/base.html' %}
+
+{% block body %}
+<form action="{% url 'piglatin' %}">
+    <div class="form-group text-center">
+        <textarea class="form-control w-50 text-center" name="untranslated" >What do you want to translate?</textarea><br>
+        <input class="btn btn-success" type="submit" value="Translate">
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'pig_app/base.html' %}
+
+{% block body %}
+<div class="row mt-3">
+    <div class="col">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Original Input</h4>
+                <p class="card-text">{{ untranslated }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-block">
+                <h4 class="card-title">Pig Latin Translation</h4>
+                <p class="card-text">{{ translated }}</p>
+            </div>
+        </div>
+        <a class="btn btn-success mt-2" href="{% url 'index' %}">New Translation</a>
+    </div>
+</div>
+{% endblock %}

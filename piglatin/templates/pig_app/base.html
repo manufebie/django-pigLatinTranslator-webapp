@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="display-4 text-center">PIGLATIN <span class="text-muted">TRANSLATOR</span></h1>
+    <hr class="w-50">
+    <nav class="nav justify-content-center">
+        <a class="nav-link text-success" href="{% url 'index' %}">Home</a>
+        <a class="nav-link text-success" href="{% url 'about' %}">About</a>
+    </nav>
+    {% block body %}
+    {% endblock%}
+</div>
+
+<div class="fixed-bottom bg-faded">
+    <div class="container">
+        <p>
+            <span class="text-uppercase">
+                <span class="font-weight-bold">piglatin</span>
+                <span class="text-muted">translator</span>
+            </span>
+                <br>by Manu Febie
+        </p>
+    </div>
+</div>
+</body>
+</html>
